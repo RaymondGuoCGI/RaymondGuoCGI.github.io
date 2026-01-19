@@ -1,0 +1,21 @@
+/* Homepage text sizing */
+#site-info .site-title {
+  font-size: 3.2rem;
+  line-height: 1.15;
+}
+
+#site-info .site-subtitle {
+  font-size: 1.35rem;
+  line-height: 1.4;
+}
+
+.recent-post-item .article-title {
+  font-size: 1.5rem;
+}
+
+/* Background image sizing */
+body {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
