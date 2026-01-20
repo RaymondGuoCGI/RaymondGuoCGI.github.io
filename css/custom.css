@@ -28,3 +28,22 @@ body {
     align-self: flex-start;
   }
 }
+
+/* Homepage title style + remove the center band */
+#page-header.full_page #site-info {
+  background: transparent;
+}
+
+#page-header #site-title {
+  background: transparent;
+  box-shadow: none;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 2.6rem;
+}
+
+@media (min-width: 768px) {
+  #page-header #site-title {
+    font-size: 3.6rem;
+  }
+}
