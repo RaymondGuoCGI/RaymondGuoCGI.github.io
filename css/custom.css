@@ -19,3 +19,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/* Keep the aside stable on desktop scroll */
+@media (min-width: 900px) {
+  #aside-content {
+    position: sticky;
+    top: 80px;
+    align-self: flex-start;
+  }
+}
