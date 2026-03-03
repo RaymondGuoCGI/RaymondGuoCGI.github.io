@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Obsidian 安装 Terminal 插件报错的解决方法 | RAYMOND STUDIO</title><meta name="author" content="Raymond Guo"><meta name="copyright" content="Raymond Guo"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="问题描述在 Obsidian 中安装 Terminal 插件后，反复弹出以下报错：  Terminal resizer exited unexpectedly: 9009  ![报错截图](Pasted image 20260303163646.png) 排查过程根据 Deepseek 的提示，使用 Ctrl + Shift + I 打开 Obsidian 开发者控制台，查看详细的错误日志，发现根">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Obsidian 安装 Terminal 插件报错的解决方法 | RAYMOND STUDIO</title><meta name="author" content="Raymond Guo"><meta name="copyright" content="Raymond Guo"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="问题描述在 Obsidian 中安装 Terminal 插件后，反复弹出以下报错：  Terminal resizer exited unexpectedly: 9009   排查过程根据 Deepseek 的提示，使用 Ctrl + Shift + I 打开 Obsidian 开发者控制台，查看详细的错误日志，发现根本原因是 Python 环境问题。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Obsidian 安装 Terminal 插件报错的解决方法">
 <meta property="og:url" content="https://raymondstudio.cn/2026/03/03/Obsidian%E5%AE%89%E8%A3%85Terminal%E6%8F%92%E4%BB%B6%E6%8A%A5%E9%94%99/index.html">
 <meta property="og:site_name" content="RAYMOND STUDIO">
-<meta property="og:description" content="问题描述在 Obsidian 中安装 Terminal 插件后，反复弹出以下报错：  Terminal resizer exited unexpectedly: 9009  ![报错截图](Pasted image 20260303163646.png) 排查过程根据 Deepseek 的提示，使用 Ctrl + Shift + I 打开 Obsidian 开发者控制台，查看详细的错误日志，发现根">
+<meta property="og:description" content="问题描述在 Obsidian 中安装 Terminal 插件后，反复弹出以下报错：  Terminal resizer exited unexpectedly: 9009   排查过程根据 Deepseek 的提示，使用 Ctrl + Shift + I 打开 Obsidian 开发者控制台，查看详细的错误日志，发现根本原因是 Python 环境问题。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raymondstudio.cn/img/avatar.png">
 <meta property="article:published_time" content="2026-03-02T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-03-03T08:44:11.103Z">
+<meta property="article:modified_time" content="2026-03-03T11:52:20.716Z">
 <meta property="article:author" content="Raymond Guo">
 <meta property="article:tag" content="Obsidian">
 <meta property="article:tag" content="插件">
@@ -20,7 +20,7 @@
   "url": "https://raymondstudio.cn/2026/03/03/Obsidian%E5%AE%89%E8%A3%85Terminal%E6%8F%92%E4%BB%B6%E6%8A%A5%E9%94%99/",
   "image": "https://raymondstudio.cn/img/avatar.png",
   "datePublished": "2026-03-02T16:00:00.000Z",
-  "dateModified": "2026-03-03T08:44:11.103Z",
+  "dateModified": "2026-03-03T11:52:20.716Z",
   "author": [
     {
       "@type": "Person",
@@ -161,20 +161,20 @@
   isHighlightShrink: false,
   isToc: true,
   pageType: 'post'
-}</script><link rel=\"stylesheet\" href=\"/css/custom.css\"><meta name="generator" content="Hexo 8.1.1"></head><body><div id="web_bg" style="background-image: url(/img/forest.jpg);"></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">RAYMOND STUDIO</span></a><a class="nav-page-title" href="/"><span class="site-name">Obsidian 安装 Terminal 插件报错的解决方法</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">Obsidian 安装 Terminal 插件报错的解决方法</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-03-02T16:00:00.000Z" title="发表于 2026-03-03 00:00:00">2026-03-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-03-03T08:44:11.103Z" title="更新于 2026-03-03 16:44:11">2026-03-03</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%B7%A5%E5%85%B7%E6%8A%98%E8%85%BE/">工具折腾</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在 Obsidian 中安装 Terminal 插件后，反复弹出以下报错：</p>
+}</script><link rel=\"stylesheet\" href=\"/css/custom.css\"><meta name="generator" content="Hexo 8.1.1"></head><body><div id="web_bg" style="background-image: url(/img/forest.jpg);"></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">RAYMOND STUDIO</span></a><a class="nav-page-title" href="/"><span class="site-name">Obsidian 安装 Terminal 插件报错的解决方法</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">Obsidian 安装 Terminal 插件报错的解决方法</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-03-02T16:00:00.000Z" title="发表于 2026-03-03 00:00:00">2026-03-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-03-03T11:52:20.716Z" title="更新于 2026-03-03 19:52:20">2026-03-03</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%B7%A5%E5%85%B7%E6%8A%98%E8%85%BE/">工具折腾</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在 Obsidian 中安装 Terminal 插件后，反复弹出以下报错：</p>
 <blockquote>
 <p><strong>Terminal resizer exited unexpectedly: 9009</strong></p>
 </blockquote>
-<p>![报错截图](Pasted image 20260303163646.png)</p>
+<p><img src="/Pasted%20image%2020260303163646.png" alt="报错截图"></p>
 <h2 id="排查过程"><a href="#排查过程" class="headerlink" title="排查过程"></a>排查过程</h2><p>根据 Deepseek 的提示，使用 <code>Ctrl + Shift + I</code> 打开 Obsidian 开发者控制台，查看详细的错误日志，发现<strong>根本原因是 Python 环境问题</strong>。</p>
-<p>![开发者控制台日志](Pasted image 20260303163810.png)</p>
+<p><img src="/Pasted%20image%2020260303163810.png" alt="开发者控制台日志"></p>
 <span id="more"></span>
 
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ol>
 <li><strong>卸载现有的 Python</strong>，清理残留环境</li>
 <li>按照 Terminal 插件仓库的官方文档，<strong>重新安装 Python 及其他推荐的依赖项</strong></li>
 </ol>
-<p>![仓库安装步骤](Pasted image 20260303163952.png)</p>
+<p><img src="/Pasted%20image%2020260303163952.png" alt="仓库安装步骤"></p>
 <p>按照上述步骤操作后，问题完美解决 ✅</p>
 <p><img src="/e74bb9781c40d49aa44a274a91b818ed.png" alt="修复成功"></p>
 <h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>如果你在 Obsidian 中遇到 Terminal 插件的 <code>9009</code> 错误，大概率是本地 Python 环境配置有问题。建议：</p>
