@@ -1,0 +1,20 @@
+{
+  "id": "conv-1772508845826-id5chnk03",
+  "title": "你好",
+  "titleGenerationStatus": "failed",
+  "createdAt": 1772508845831,
+  "updatedAt": 1772525103150,
+  "lastResponseAt": 1772525057547,
+  "sessionId": "96a50d3d-af6b-47f9-a096-6ff0b475ca04",
+  "sdkSessionId": "96a50d3d-af6b-47f9-a096-6ff0b475ca04",
+  "currentNote": "如何搭建个人知识库.md",
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 18891,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 0,
+    "contextWindow": 200000,
+    "contextTokens": 18891,
+    "percentage": 9
+  }
+}

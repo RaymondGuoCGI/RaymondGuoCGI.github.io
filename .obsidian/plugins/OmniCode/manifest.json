@@ -1,0 +1,10 @@
+{
+  "id": "omnicode",
+  "name": "OmniCode",
+  "version": "1.4.1",
+  "minAppVersion": "1.4.5",
+  "description": "Embeds local AI agents and API LLMs as collaborators in your vault. Supports Claude Code, Codex CLI, Gemini CLI, and OpenAI-compatible APIs (DeepSeek/GLM/custom).",
+  "author": "Raymond Guo",
+  "authorUrl": "",
+  "isDesktopOnly": true
+}

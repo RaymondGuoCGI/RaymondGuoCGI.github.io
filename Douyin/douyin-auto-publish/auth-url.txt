@@ -1,0 +1,4 @@
+
+> douyin-auto-publish@0.1.0 auth-url
+> node src/index.js --auth-url
+

@@ -1,0 +1,1 @@
+https://www.coursera.org/learn/machine-learning-linear-algebra/lecture/tIhzi/machine-learning-motivation

@@ -1,0 +1,32 @@
+{
+  "mode": "openapi",
+  "dryRun": true,
+  "apiBaseUrl": "https://open.douyin.com",
+  "oauthAuthorizeUrl": "https://open.douyin.com/platform/oauth/connect/",
+  "oauthAccessTokenUrl": "https://open.douyin.com/oauth/access_token/",
+  "clientKey": "REPLACE_WITH_CLIENT_KEY",
+  "clientSecret": "REPLACE_WITH_CLIENT_SECRET",
+  "redirectUri": "https://your-domain.com/douyin/callback",
+  "scope": "user_info,video.create",
+  "state": "douyin_auto_publish",
+  "accessToken": "REPLACE_WITH_ACCESS_TOKEN",
+  "refreshToken": "REPLACE_WITH_REFRESH_TOKEN",
+  "openId": "",
+  "accessTokenExpiresAt": "",
+  "refreshTokenExpiresAt": "",
+  "publishEndpoint": "/open_api/v1/video/create/",
+  "defaultTopics": [
+    "知识分享",
+    "效率工具"
+  ],
+  "safetyRules": {
+    "forbiddenTerms": [
+      "包治百病",
+      "绝对收益"
+    ]
+  },
+  "ai": {
+    "provider": "mock",
+    "model": "mock-v1"
+  }
+}

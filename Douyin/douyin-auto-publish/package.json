@@ -1,0 +1,14 @@
+{
+  "name": "douyin-auto-publish",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dry-run": "node src/index.js --dry-run",
+    "publish": "node src/index.js --publish",
+    "auth-url": "node src/index.js --auth-url",
+    "token:exchange": "node src/index.js --exchange-code",
+    "token:refresh": "node src/index.js --refresh-token"
+  }
+}

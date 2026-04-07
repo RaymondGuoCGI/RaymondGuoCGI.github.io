@@ -1,0 +1,195 @@
+{
+  "main": {
+    "id": "c672fcdcaec57721",
+    "type": "split",
+    "children": [
+      {
+        "id": "b1b4dc164c47fe4a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "05ff0cdbdca6d73f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Machine Learning Specialization.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Machine Learning Specialization"
+            }
+          }
+        ]
+      },
+      {
+        "id": "5959291d6ef29c93",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e4cc948a99308967",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "75180680cb3f4e6d",
+    "type": "split",
+    "children": [
+      {
+        "id": "dd294116d0204c29",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f54813fb2f85f134",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "62a05e3a3a6b73a2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "e7749024d5d66a5e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a23a1485fe2927f4",
+    "type": "split",
+    "children": [
+      {
+        "id": "54ad75aac0562c13",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cde1e56264d6e4e6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Machine Learning Specialization.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Machine Learning Specialization"
+            }
+          },
+          {
+            "id": "ae4c9fc38b70525a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Machine Learning Specialization.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Machine Learning Specialization"
+            }
+          },
+          {
+            "id": "8270e389efb082cb",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "bdfd0ee8c0345620",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Machine Learning Specialization.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Machine Learning Specialization"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "05ff0cdbdca6d73f",
+  "lastOpenFiles": [
+    "AI&ML.md",
+    "Machine Learning Specialization.md",
+    "Linear Algebra for Machine Learning and Data Science.md",
+    "Untitled.md",
+    "Welcome.md"
+  ]
+}
