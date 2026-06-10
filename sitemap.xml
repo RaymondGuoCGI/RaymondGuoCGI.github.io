@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://raymondstudio.cn/2026/06/10/2026-06-10-codex-installation-fix-move-to-c-drive/</loc>
+    
+    <lastmod>2026-06-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://raymondstudio.cn/2026/06/10/2026-06-10-google-adsense-high-revenue-research/</loc>
     
     <lastmod>2026-06-10</lastmod>
@@ -447,6 +456,34 @@
   
   <url>
     <loc>https://raymondstudio.cn/tags/%E7%AD%96%E7%95%A5%E6%8C%87%E5%8D%97/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://raymondstudio.cn/tags/Codex/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://raymondstudio.cn/tags/Computer-Use/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://raymondstudio.cn/tags/Chrome-Extension/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://raymondstudio.cn/tags/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
