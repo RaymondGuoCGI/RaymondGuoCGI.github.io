@@ -222,7 +222,7 @@
   </url>
   
   <url>
-    <loc>https://raymondstudio.cn/tags/TUN/</loc>
+    <loc>https://raymondstudio.cn/tags/%E4%BB%A3%E7%90%86/</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -236,7 +236,7 @@
   </url>
   
   <url>
-    <loc>https://raymondstudio.cn/tags/%E4%BB%A3%E7%90%86/</loc>
+    <loc>https://raymondstudio.cn/tags/TUN/</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -453,6 +453,13 @@
   </url>
   
   <url>
+    <loc>https://raymondstudio.cn/tags/%E5%B7%A5%E4%B8%9A%E8%AE%BE%E8%AE%A1/</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://raymondstudio.cn/tags/Google-AdSense/</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -467,14 +474,7 @@
   </url>
   
   <url>
-    <loc>https://raymondstudio.cn/tags/%E4%BE%A7%E6%94%AF%E6%94%B6%E5%85%A5/</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://raymondstudio.cn/tags/%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/</loc>
+    <loc>https://raymondstudio.cn/tags/%E8%B7%A8%E7%95%8C%E6%8E%A2%E7%B4%A2/</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -603,13 +603,6 @@
   
   <url>
     <loc>https://raymondstudio.cn/categories/%E5%95%86%E4%B8%9A%E6%80%9D%E8%80%83/</loc>
-    <lastmod>2026-06-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://raymondstudio.cn/categories/%E4%BA%92%E8%81%94%E7%BD%91%E8%90%A5%E9%94%80/</loc>
     <lastmod>2026-06-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
