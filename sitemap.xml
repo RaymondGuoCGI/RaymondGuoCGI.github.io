@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://raymondstudio.cn/2026/04/06/RackNerd-2026-Promo/</loc>
+    
+    <lastmod>2026-06-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://raymondstudio.cn/2026/01/19/2026%E8%80%81%E7%89%8C%E7%A8%B3%E5%AE%9A%E5%A4%9A%E5%B9%B4%E8%87%AA%E7%94%A8%E6%9C%BA%E5%9C%BA%E6%8E%A8%E8%8D%90/</loc>
     
     <lastmod>2026-06-23</lastmod>
@@ -176,15 +185,6 @@
     <loc>https://raymondstudio.cn/2026/04/07/2026-04-07-linux-security-migration-root-to-home/</loc>
     
     <lastmod>2026-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://raymondstudio.cn/2026/04/06/RackNerd-2026-Promo/</loc>
-    
-    <lastmod>2026-04-06</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
