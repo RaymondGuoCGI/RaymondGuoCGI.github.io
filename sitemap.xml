@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://raymondstudio.cn/2026/06/23/2026-06-23-codex-workflow-tips/</loc>
+    
+    <lastmod>2026-06-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://raymondstudio.cn/2026/04/06/RackNerd-2026-Promo/</loc>
     
     <lastmod>2026-06-23</lastmod>
@@ -836,6 +845,34 @@
   
   <url>
     <loc>https://raymondstudio.cn/tags/Discounts/</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://raymondstudio.cn/tags/AI-%E7%BC%96%E7%A8%8B/</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://raymondstudio.cn/tags/AGENTS-md/</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://raymondstudio.cn/tags/Agent-Skills/</loc>
+    <lastmod>2026-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://raymondstudio.cn/tags/MCP/</loc>
     <lastmod>2026-06-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
