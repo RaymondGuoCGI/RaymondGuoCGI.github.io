@@ -1,7 +1,0 @@
-[[Pre-Installation]]
-[[01]]
-[[02]]
-[[03]]
-[[Modeling]]
-[[Freelance Websites]]
-[[Tutorial with Free Work Files]]
