@@ -1,0 +1,49 @@
+/* Homepage text sizing */
+#site-info .site-title {
+  font-size: 3.2rem;
+  line-height: 1.15;
+}
+
+#site-info .site-subtitle {
+  font-size: 1.35rem;
+  line-height: 1.4;
+}
+
+.recent-post-item .article-title {
+  font-size: 1.5rem;
+}
+
+/* Background image sizing */
+body {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Keep the aside stable on desktop scroll */
+@media (min-width: 900px) {
+  #aside-content {
+    position: sticky;
+    top: 80px;
+    align-self: flex-start;
+  }
+}
+
+/* Homepage title style + remove the center band */
+#page-header.full_page #site-info {
+  background: transparent;
+}
+
+#page-header #site-title {
+  background: transparent;
+  box-shadow: none;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 3rem;
+}
+
+@media (min-width: 768px) {
+  #page-header #site-title {
+    font-size: 4.2rem;
+  }
+}
