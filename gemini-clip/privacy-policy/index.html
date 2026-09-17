@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gemini Clip Privacy Policy — Raymond Studio</title><meta name="description" content="Gemini Clip privacy policy: local processing, image downloads, saved tasks, permissions, and data deletion."><style>body{max-width:820px;margin:48px auto;padding:0 24px;font:17px/1.75 system-ui,sans-serif;color:#232936;background:#fcfcfd}h1{font-size:34px;line-height:1.2}h2{margin-top:36px;font-size:24px}a{color:#1859aa}li{margin:8px 0}footer{margin-top:48px;border-top:1px solid #ddd;padding-top:18px;font-size:14px}</style><body><h1>Gemini Clip Privacy Policy</h1>
+<p>Last updated: September 17, 2026</p>
+<p>Release: 0.3.113</p>
+<p>Gemini Clip processes selected Gemini conversation content in your browser. It does not transmit conversation content, images, settings, or task records to the developer, advertising networks, analytics services, or a developer-operated processing server. Requested imports and submissions interact with Google's Gemini service under your existing account.</p>
+<h2>Content handled</h2>
+<p>When you open Review, the extension can read selected conversation text and images and capture the current Gemini draft, including attachments that can be matched safely. Recent file objects from your drag, paste, or file selection may be retained temporarily in memory. Selected text, image references or bytes, additional instructions, and destinations are used for your requested import, submission, repeat, drag, or download.</p>
+<p>Import fills a draft without sending. Import &amp; submit and Submit perform the corresponding action you choose. Optional repeated sends execute the task configuration you explicitly start. Refresh recovery restores unfinished tasks paused and requires manual Resume.</p>
+<h2>Downloads and local image processing</h2>
+<p>Original mode retrieves the available original image bytes and preserves their supported file format. Clean mode processes compatible visible Gemini image marks locally. The document-start image filter may transform matching full-size Gemini image responses in memory before a later download. Merely hovering or selecting an image does not start a download.</p>
+<p>The combined Good response &amp; download action selects Gemini's Good response state when needed and starts the download. A separate optional setting, off by default, starts a download after you click Gemini's native Like control. Download status is monitored through Chrome's download manager.</p>
+<p>Optional AI-texture correction is local and disabled by default. Image processing does not send pixels to a processing server and does not remove or claim to remove invisible provenance such as SynthID or Content Credentials. Verified clean images may be cached briefly in memory for repeat downloads.</p>
+<h2>Local storage and retention</h2>
+<p>The extension uses local extension storage, session storage, and short-lived memory for:</p>
+<ul>
+<li>Preferences, language, shortcuts, download modes, and repeated-task options.</li>
+<li>Last selection, last reviewed step, target conversations, temporary import payloads, and recoverable unfinished tasks. These can include prompt text and selected image bytes needed to complete your action.</li>
+<li>Task ownership and account-scope identifiers that separate recovery between Gemini tabs/accounts.</li>
+<li>Up to 30 recent terminal task records, including status, completion time, normalized prompt text, attachment names, and bounded image thumbnails. History details do not retain the original full-size attachment files. Older records may contain fewer details.</li>
+<li>Local runtime diagnostics containing extension/build version, load time, and account scope. These are not telemetry and are not sent to the developer.</li>
+</ul>
+<p>Clear History removes the local history records and saved details. Task removal and the relevant Clear controls remove their corresponding data. Clearing extension data or uninstalling removes extension-owned storage. Temporary pending imports expire; saved preferences and retained history are not represented as automatically expiring.</p>
+<p>Optional Pause while reviewing images uses pointer movement only in the current page's memory to delay the next action. Pointer coordinates are not recorded in persistent storage or transmitted. The extension does not collect cross-site browsing history or behavioral analytics.</p>
+<p>Repeated tasks can continue while another browser tab is active when that option is enabled. An active task may temporarily prevent automatic tab discarding; its prior discard setting is restored when the guard ends. Page refresh does not automatically resume submissions. Service-error pauses require manual Resume; any recommended waiting time is displayed separately.</p>
+<h2>Permissions</h2>
+<ul>
+<li>activeTab: lets the popup address the active Gemini tab for user-requested actions.</li>
+<li>downloads: saves requested original or processed images and follows their download completion or failure.</li>
+<li>offscreen: provides local image decoding and canvas processing outside the visible page.</li>
+<li>storage: retains the preferences, import state, task recovery/history, and local diagnostics described above.</li>
+<li>unlimitedStorage: supports local image payloads that can exceed the standard extension storage quota.</li>
+<li>gemini.google.com: supports conversation selection, current-draft capture, import, explicit submission, task controls, and image actions.</li>
+<li>Google-hosted googleusercontent.com, googleapis.com, and gstatic.com resources: retrieve image resources involved in supported Gemini operations. These permissions do not authorize reading unrelated websites.</li>
+</ul>
+<h2>Remote code, payments, and sharing</h2>
+<p>Executable code is bundled with the extension. Gemini Clip contains no advertising, analytics, telemetry, or remote processing backend. It does not sell user data or use it for advertising, creditworthiness, or lending.</p>
+<p>Optional support links open PayPal. Donations are voluntary and unlock no features. PayPal handles its own payment information; Gemini Clip does not process payments. Google's and PayPal's services are governed by their respective policies.</p>
+<h2>Contact</h2>
+<p>raymondstudio.tech@gmail.com</p><footer><a href="https://raymondstudio.cn/">Raymond Studio</a> · <a href="https://chromewebstore.google.com/detail/gemini-clip/nhkcfanoipgmjglijcbodpkjagoiablb">Gemini Clip on Chrome Web Store</a></footer></body></html>
