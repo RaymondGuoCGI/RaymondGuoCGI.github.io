@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ChatGPT Clip Privacy Policy — Raymond Studio</title>
+<meta name="description" content="ChatGPT Clip privacy policy: selected conversation content, local task recovery, image downloads, permissions, and data deletion.">
+<style>body{max-width:820px;margin:48px auto;padding:0 24px;font:17px/1.75 system-ui,sans-serif;color:#232936;background:#fcfcfd}h1{font-size:34px;line-height:1.2}h2{margin-top:36px;font-size:24px}a{color:#1859aa}li{margin:8px 0}footer{margin-top:48px;border-top:1px solid #ddd;padding-top:18px;font-size:14px}</style>
+<body>
+<h1>ChatGPT Clip Privacy Policy</h1>
+<p>Last updated: September 17, 2026 · Release: 0.2.34</p>
+<p>ChatGPT Clip helps you select, review, edit, and reuse text and images from ChatGPT conversations. Selected content is processed in your browser. It is not sent to the extension developer, an advertising network, an analytics service, or a developer-operated server.</p>
+<h2>Content handled and its use</h2>
+<p>The extension handles conversation and draft text, selected images and image URLs, attachment filenames and metadata, optional Review instructions, preferences, task state and history, and compact recovery information needed for your chosen actions.</p>
+<p>Import fills a ChatGPT composer without sending. Import &amp; submit fills and sends after you choose that action. Submit sends the existing draft. Optional repeated sends are off by default and use the limits and controls you choose. ChatGPT receives imported or submitted content through its own page and your existing account session; its handling is governed by OpenAI's policies and your account settings.</p>
+<h2>Image downloads</h2>
+<p>Download actions retrieve supported OpenAI-hosted image resources after an explicit request. You may download the current image or the loaded images belonging to the same supported response/gallery. Available full-size image addresses are preferred when the page exposes them; the extension cannot guarantee an original-resolution file when no such address is available. Downloads are saved through Chrome's download manager.</p>
+<h2>Local storage and recovery</h2>
+<p>Full image attachment bytes for normal current-chat, chosen-chat, and new-chat import flows stay in the current page's memory. Normal transfer and durable recovery records do not persist full image bytes in extension local storage or session storage.</p>
+<p>Local records can contain selected or reviewed text, image references and filenames, source conversation URLs, preferences, last actions, task metadata, progress, a short history text preview, and compact recovery information. Local account-scope and target information helps prevent a recovered task from being sent to the wrong chat or account. Legacy transfer records may be processed for upgrade compatibility.</p>
+<p>If a task is restored after a reload and exact image bytes are unavailable, you must reselect the attachment. The extension does not silently refetch an image and assume it is identical. An existing same-page task can continue while its original attachments remain in memory.</p>
+<h2>Interaction and background behavior</h2>
+<p>The extension reacts to page actions, navigation, visibility, and pointer activity to operate its interface and verify requested tasks. These events are not collected as behavioral analytics or a user-activity profile. Tasks can continue while another tab or application is active when background continuation is enabled. Refresh, page freezing or discarding, sleep, closing the browser, and unverified changes to the target or draft can require a pause or manual recovery.</p>
+<h2>Permissions</h2>
+<ul>
+<li><strong>activeTab:</strong> start selection and Review on the active ChatGPT tab.</li>
+<li><strong>clipboardWrite:</strong> copy text when you choose that action.</li>
+<li><strong>downloads:</strong> save generated images you explicitly request.</li>
+<li><strong>storage:</strong> retain preferences, selected/reviewed text, compact recovery records, task metadata/history, and safety state locally.</li>
+<li><strong>ChatGPT and declared OpenAI resource hosts:</strong> show the interface, read selected content, import into a chosen composer, verify explicit sends, and retrieve image resources needed for requested imports or downloads. These permissions are not used to read unrelated websites.</li>
+</ul>
+<h2>Remote code, sharing, and payments</h2>
+<p>All executable extension code is included in its package. The extension contains no analytics, advertising trackers, remote logging, or developer-operated processing backend. It does not sell user data or use it for advertising, creditworthiness, lending, or unrelated purposes.</p>
+<p>An optional PayPal.Me link allows voluntary support. Donations unlock no features, credits, limits, or services. Payment information is handled by PayPal, not by ChatGPT Clip.</p>
+<h2>Your controls</h2>
+<p>You choose what to select, edit, import, send, repeat, copy, or download. You can stop or remove tasks, clear relevant extension/site data, or uninstall the extension. Clearing extension storage or uninstalling removes extension-owned local records. Data already retained in your ChatGPT account or downloaded to your computer is managed separately through ChatGPT or your file system.</p>
+<h2>Contact</h2>
+<p><a href="mailto:raymondguo.cgi@gmail.com">raymondguo.cgi@gmail.com</a></p>
+<footer><a href="https://raymondstudio.cn/">Raymond Studio</a> · <a href="https://chromewebstore.google.com/detail/chatgpt-clip/imcacbnibookedogjndjlineajgiacmd">ChatGPT Clip on Chrome Web Store</a></footer>
+</body></html>
