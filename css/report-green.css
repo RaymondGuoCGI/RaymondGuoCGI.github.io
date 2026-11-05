@@ -1439,3 +1439,26 @@ dialog.rg-search::backdrop {
     scroll-behavior: auto !important;
   }
 }
+
+
+/* cover-css.txt — 新增文章 figure 精确 CSS 增量（review-v2）
+   仅用于文章页 .p-cover；列表卡片 CSS 一律不改，
+   已认可的 176x124 桌面 / 180 高手机卡片几何保持不变。
+   文章封面实际尺寸 1280x720，列表缩略图实际尺寸 480x270，模板已写清宽高。
+   其它字体/颜色/布局/统计 JS/评论/正文/路由一字不改。 */
+
+.p-cover {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.p-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
