@@ -1462,3 +1462,63 @@ dialog.rg-search::backdrop {
   border-radius: 12px;
 }
 
+
+
+/* body-images append (2026-11-05) — 正文图容错 CSS 增量，追加到 report-green.css 原文件末尾。
+   只针对 .p-content 内增强过的正文图与失败提示；不改现有 .p-content img / .p-cover /
+   .pc-cover 及其他布局、字体、颜色。无 JS 时不加任何类名，原生图片照常显示；
+   只有最终失败并已显示手动提示时，才隐藏破图图标（.is-body-img-failed），正常图永不隐藏。 */
+
+/* 正文图加载中的占位底色，避免白底闪烁；不隐藏图片 */
+.p-content img[data-original-src] {
+  background: var(--panel2);
+}
+
+/* 最终失败才隐藏破图图标（此时下方已有手动重试 / 查看原图） */
+.p-content img.is-body-img-failed {
+  display: none;
+}
+
+/* 失败手动操作条：沿用面板、边框、强调色与圆角 */
+.rg-body-img-fallback {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  margin: 1em auto;
+  padding: 12px 16px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+.rg-body-img-fallback .rg-body-img-retry {
+  background: var(--panel2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.88rem;
+}
+
+.rg-body-img-fallback .rg-body-img-retry:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.rg-body-img-fallback .rg-body-img-original {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.rg-body-img-fallback .rg-body-img-original:hover {
+  color: var(--accent-hover);
+}
+

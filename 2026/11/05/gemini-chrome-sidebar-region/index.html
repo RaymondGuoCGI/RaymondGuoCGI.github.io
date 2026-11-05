@@ -155,14 +155,14 @@
   <h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><p>Gemini 官网能正常打开，但 Chrome 右侧的 Ask Gemini 提示 Gemini in Chrome isn’t available，并说明尚未在所有地区开放。</p>
 <span id="more"></span>
 
-<p><img src="/img/posts/gemini-chrome-sidebar-region/gemini-web-and-sidebar-unavailable.png" alt="Gemini 网页与右侧侧栏同屏，右侧显示地区不可用提示"></p>
+<p><img src="/img/posts/gemini-chrome-sidebar-region/gemini-web-and-sidebar-unavailable-body.webp" srcset="/img/posts/gemini-chrome-sidebar-region/gemini-web-and-sidebar-unavailable-body-960.webp 960w, /img/posts/gemini-chrome-sidebar-region/gemini-web-and-sidebar-unavailable-body.webp 2250w" sizes="(max-width: 960px) 100vw, 960px" width="2250" height="1256" loading="lazy" decoding="async" data-original-src="/img/posts/gemini-chrome-sidebar-region/gemini-web-and-sidebar-unavailable.png" alt="Gemini 网页与右侧侧栏同屏，右侧显示地区不可用提示"></p>
 <h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
 <li>在地址栏输入 chrome:&#x2F;&#x2F;translate-internals 并打开。</li>
 <li>在页面中找到 Prefs，再找到 Override Variations Country 这一项。</li>
 <li>先记下原来的值，再把值改成小写 us，然后点这项旁边的 update 保存。</li>
 <li>先保存正在进行的网页工作，再完全退出 Chrome，等浏览器完全关闭后重新打开，然后再打开 Ask Gemini 检查侧栏是否已经恢复欢迎页和输入框。</li>
 </ol>
-<p><img src="/img/posts/gemini-chrome-sidebar-region/gemini-web-and-sidebar-restored.png" alt="Gemini 网页与右侧侧栏同屏，地区报错已消失，侧栏正常显示"></p>
+<p><img src="/img/posts/gemini-chrome-sidebar-region/gemini-web-and-sidebar-restored-body.webp" srcset="/img/posts/gemini-chrome-sidebar-region/gemini-web-and-sidebar-restored-body-960.webp 960w, /img/posts/gemini-chrome-sidebar-region/gemini-web-and-sidebar-restored-body.webp 2254w" sizes="(max-width: 960px) 100vw, 960px" width="2254" height="1262" loading="lazy" decoding="async" data-original-src="/img/posts/gemini-chrome-sidebar-region/gemini-web-and-sidebar-restored.png" alt="Gemini 网页与右侧侧栏同屏，地区报错已消失，侧栏正常显示"></p>
 <p>这次截图中，地区报错已消失，侧栏恢复欢迎页和输入框。</p>
 <p>方法来自<a target="_blank" rel="noopener" href="https://www.v2ex.com/t/1249715?p=1#reply13">V2EX原帖</a>，使用条件以<a target="_blank" rel="noopener" href="https://support.google.com/chrome/answer/17140089?hl=en">Google官方说明</a>为准。</p>
 

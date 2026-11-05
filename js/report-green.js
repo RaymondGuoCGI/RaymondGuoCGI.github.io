@@ -564,3 +564,203 @@
     init();
   }
 })();
+
+
+/* body-images append v2 (2026-11-05) — 正文图容错增量，追加到 report-green.js 原文件末尾。
+   原文件为一个 IIFE，本增量是独立的第二个 IIFE，不改原 IIFE、不改 init() 调用链。
+   只处理 .p-content 内带 data-original-src 的正文图（即 post-body.ejs 已增强为 WebP 的图）；
+   封面、列表卡片、站内搜索等其他图片一律不动；无 JS 时原生 <img> 照常显示。
+   每轮自动链路（每轮最多 3 次加载：首次 + 1 次 WebP 重试 + 1 次 PNG 回退）：
+     WebP 失败 -> 对实际选中的 optimized WebP 做且只做 1 次带缓存更新 query 的重试
+                 （首次选 full 失败可改试 960；首次已选 960 则重试 960；绝不从 srcset
+                 重新选回失败的大图；实际选中以 currentSrc 为准）
+              -> 原 PNG 回退一次
+              -> 仍失败则停自动请求，显示手动操作（重试 / 查看原图）。
+   手动“重试”是用户每次明确点击开启的新一轮：点击后立即禁用并移除旧按钮防双击排队，
+   新一轮同样最多 1 次 WebP 重试 + 1 次 PNG 回退；成功则移除错误提示。
+   无定时轮询、无自动重启循环；不存在无限自动加载；不对用户后续主动点击设终身上限。
+   数据源只认本站 /img/ 静态路径（以 /img/ 开头且不含 ..）；不拼外链、不 eval、不 innerHTML，
+   提示节点全部用 createElement + textContent + setAttribute 生成。
+   失败提示用 <span>（Markdown 生成的 <p> 内只能放短语内容，<div> 不合内容模型；
+   CSS .rg-body-img-fallback 已是 display:flex，外观不变，无需改 CSS）。 */
+
+/* body-images append v2 (2026-11-05) */
+(function () {
+  'use strict';
+
+  function isSafeImgPath(u) {
+    return typeof u === 'string' && u.indexOf('/img/') === 0 && u.indexOf('..') === -1;
+  }
+
+  /* 把绝对 URL 还原为本站路径；外链返回 '' */
+  function sameSitePath(u) {
+    if (typeof u !== 'string' || !u) return '';
+    if (u.indexOf('/img/') === 0) return u;
+    var origin = (typeof window !== 'undefined' && window.location) ? window.location.origin : '';
+    if (origin && u.indexOf(origin) === 0) {
+      var rest = u.slice(origin.length);
+      if (rest.indexOf('/img/') === 0) return rest;
+    }
+    return '';
+  }
+
+  function numAttr(img, name) {
+    var v = parseInt(img.getAttribute(name) || '0', 10);
+    return isNaN(v) ? 0 : v;
+  }
+
+  function stripQuery(u) {
+    var q = u.indexOf('?');
+    return q === -1 ? u : u.slice(0, q);
+  }
+
+  /* 每次 WebP 重试用递增的 query，保证拿到新缓存而不是同一份失败缓存 */
+  function withCacheBuster(img, target) {
+    var n = numAttr(img, 'data-bi-retry-n') + 1;
+    img.setAttribute('data-bi-retry-n', String(n));
+    return stripQuery(target) + '?bi=' + n;
+  }
+
+  function smallFromSrcset(img) {
+    var srcset = img.getAttribute('srcset') || '';
+    var parts = srcset.split(',');
+    for (var i = 0; i < parts.length; i++) {
+      var seg = parts[i].trim().split(/\s+/);
+      if (seg.length >= 2 && seg[1] === '960w' && isSafeImgPath(seg[0])) return seg[0];
+    }
+    return '';
+  }
+
+  function remember(img) {
+    if (!img.getAttribute('data-bi-webp')) {
+      var s = img.getAttribute('src') || '';
+      if (isSafeImgPath(s)) img.setAttribute('data-bi-webp', s);
+    }
+    if (!img.getAttribute('data-bi-small')) {
+      var small = smallFromSrcset(img);
+      if (small) img.setAttribute('data-bi-small', small);
+    }
+  }
+
+  function clearFallback(img) {
+    img.classList.remove('is-body-img-failed');
+    var next = img.nextSibling;
+    while (next && next.nodeType !== 1) next = next.nextSibling;
+    if (next && next.classList && next.classList.contains('rg-body-img-fallback')) {
+      next.parentNode.removeChild(next);
+    }
+  }
+
+  function showFallback(img) {
+    clearFallback(img);
+    img.classList.add('is-body-img-failed');
+    var original = img.getAttribute('data-original-src') || '';
+    var box = document.createElement('span');
+    box.className = 'rg-body-img-fallback';
+    box.setAttribute('role', 'status');
+    var msg = document.createElement('span');
+    msg.textContent = '图片加载失败，可重试或查看原图。';
+    box.appendChild(msg);
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'rg-body-img-retry';
+    btn.textContent = '重试';
+    btn.addEventListener('click', function () {
+      /* 立即禁用并移除旧按钮：防双击排队竞争；本次点击即开启新一轮 */
+      btn.disabled = true;
+      clearFallback(img);
+      img.removeAttribute('data-bi-tried-retry');
+      img.removeAttribute('data-bi-triedpng');
+      img.setAttribute('data-bi-stage', 'webp');
+      var webp = img.getAttribute('data-bi-webp') || '';
+      if (isSafeImgPath(webp)) {
+        img.removeAttribute('srcset');
+        img.removeAttribute('sizes');
+        img.src = withCacheBuster(img, webp);
+      }
+    });
+    box.appendChild(btn);
+    if (isSafeImgPath(original)) {
+      var link = document.createElement('a');
+      link.className = 'rg-body-img-original';
+      link.setAttribute('href', original);
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener');
+      link.textContent = '查看原图';
+      box.appendChild(link);
+    }
+    if (img.parentNode) img.parentNode.insertBefore(box, img.nextSibling);
+  }
+
+  function handleFailure(img) {
+    var triedRetry = img.getAttribute('data-bi-tried-retry') === '1';
+    var triedPng = img.getAttribute('data-bi-triedpng') === '1';
+    var current = sameSitePath(img.currentSrc || img.getAttribute('src') || '');
+    var curPath = stripQuery(current);
+    var webp = img.getAttribute('data-bi-webp') || '';
+    var small = img.getAttribute('data-bi-small') || '';
+    var original = img.getAttribute('data-original-src') || '';
+    if (!triedRetry) {
+      /* 本轮唯一一次 WebP 重试：重试实际选中的那张 optimized WebP */
+      var target = '';
+      if (isSafeImgPath(curPath) && /-body(-960)?\.webp$/.test(curPath)) {
+        /* 首次选 full 失败且有 960：改试 960；首次已选 960：重试 960 */
+        target = (curPath !== small && isSafeImgPath(small)) ? small : curPath;
+      } else if (isSafeImgPath(webp)) {
+        target = webp;
+      }
+      if (target) {
+        img.setAttribute('data-bi-tried-retry', '1');
+        img.setAttribute('data-bi-stage', 'webp-retry');
+        img.removeAttribute('srcset');
+        img.removeAttribute('sizes');
+        img.src = withCacheBuster(img, target);
+        return;
+      }
+    }
+    if (!triedPng && isSafeImgPath(original)) {
+      img.setAttribute('data-bi-triedpng', '1');
+      img.setAttribute('data-bi-stage', 'png');
+      img.removeAttribute('srcset');
+      img.removeAttribute('sizes');
+      img.src = original;
+      return;
+    }
+    img.setAttribute('data-bi-stage', 'failed');
+    showFallback(img);
+  }
+
+  function isEnhanced(img) {
+    if (!img || img.tagName !== 'IMG') return false;
+    if (!img.getAttribute('data-original-src')) return false;
+    if (!img.closest || !img.closest('.p-content')) return false;
+    return true;
+  }
+
+  function initBodyImages() {
+    if (!document.querySelectorAll) return;
+    var imgs = document.querySelectorAll('.p-content img[data-original-src]');
+    for (var i = 0; i < imgs.length; i++) {
+      remember(imgs[i]);
+      /* 缓存中已失败的图：complete 为真且 naturalWidth 为 0；lazy 未入视口的图 complete 为假，不算失败 */
+      if (imgs[i].complete && imgs[i].naturalWidth === 0) handleFailure(imgs[i]);
+    }
+    document.addEventListener('error', function (e) {
+      var img = e.target;
+      if (!isEnhanced(img)) return;
+      handleFailure(img);
+    }, true);
+    document.addEventListener('load', function (e) {
+      var img = e.target;
+      if (!isEnhanced(img)) return;
+      if (img.complete && img.naturalWidth > 0) clearFallback(img);
+    }, true);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initBodyImages);
+  } else {
+    initBodyImages();
+  }
+})();
+

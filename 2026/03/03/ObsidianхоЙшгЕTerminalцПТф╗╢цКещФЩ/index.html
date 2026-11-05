@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://raymondstudio.cn/img/posts/obsidian-terminal-9009/repo-install-steps.png">
 <meta property="og:image" content="https://raymondstudio.cn/img/posts/obsidian-terminal-9009/fixed-success.png">
 <meta property="article:published_time" content="2026-03-02T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-11-05T12:11:39.303Z">
+<meta property="article:modified_time" content="2026-11-05T13:08:42.409Z">
 <meta property="article:author" content="Raymond Guo">
 <meta property="article:tag" content="Obsidian">
 <meta property="article:tag" content="插件">
@@ -157,18 +157,18 @@
 <blockquote>
 <p><strong>Terminal resizer exited unexpectedly: 9009</strong></p>
 </blockquote>
-<p><img src="/img/posts/obsidian-terminal-9009/error-9009-popup.png" alt="报错截图"></p>
+<p><img src="/img/posts/obsidian-terminal-9009/error-9009-popup-body.webp" width="1024" height="800" loading="lazy" decoding="async" data-original-src="/img/posts/obsidian-terminal-9009/error-9009-popup.png" alt="报错截图"></p>
 <h2 id="排查过程"><a href="#排查过程" class="headerlink" title="排查过程"></a>排查过程</h2><p>根据 Deepseek 的提示，使用 <code>Ctrl + Shift + I</code> 打开 Obsidian 开发者控制台，查看详细的错误日志，发现<strong>根本原因是 Python 环境问题</strong>。</p>
-<p><img src="/img/posts/obsidian-terminal-9009/devtools-log.png" alt="开发者控制台日志"></p>
+<p><img src="/img/posts/obsidian-terminal-9009/devtools-log-body.webp" srcset="/img/posts/obsidian-terminal-9009/devtools-log-body-960.webp 960w, /img/posts/obsidian-terminal-9009/devtools-log-body.webp 1489w" sizes="(max-width: 960px) 100vw, 960px" width="1489" height="792" loading="lazy" decoding="async" data-original-src="/img/posts/obsidian-terminal-9009/devtools-log.png" alt="开发者控制台日志"></p>
 <span id="more"></span>
 
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ol>
 <li><strong>卸载现有的 Python</strong>，清理残留环境</li>
 <li>按照 Terminal 插件仓库的官方文档，<strong>重新安装 Python 及其他推荐的依赖项</strong></li>
 </ol>
-<p><img src="/img/posts/obsidian-terminal-9009/repo-install-steps.png" alt="仓库安装步骤"></p>
+<p><img src="/img/posts/obsidian-terminal-9009/repo-install-steps-body.webp" srcset="/img/posts/obsidian-terminal-9009/repo-install-steps-body-960.webp 960w, /img/posts/obsidian-terminal-9009/repo-install-steps-body.webp 1153w" sizes="(max-width: 960px) 100vw, 960px" width="1153" height="655" loading="lazy" decoding="async" data-original-src="/img/posts/obsidian-terminal-9009/repo-install-steps.png" alt="仓库安装步骤"></p>
 <p>按照上述步骤操作后，问题完美解决 ✅</p>
-<p><img src="/img/posts/obsidian-terminal-9009/fixed-success.png" alt="修复成功"></p>
+<p><img src="/img/posts/obsidian-terminal-9009/fixed-success-body.webp" srcset="/img/posts/obsidian-terminal-9009/fixed-success-body-960.webp 960w, /img/posts/obsidian-terminal-9009/fixed-success-body.webp 1510w" sizes="(max-width: 960px) 100vw, 960px" width="1510" height="800" loading="lazy" decoding="async" data-original-src="/img/posts/obsidian-terminal-9009/fixed-success.png" alt="修复成功"></p>
 <h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>如果你在 Obsidian 中遇到 Terminal 插件的 <code>9009</code> 错误，大概率是本地 Python 环境配置有问题。建议：</p>
 <ul>
 <li>善用 <code>Ctrl + Shift + I</code> 打开开发者工具查看具体报错</li>
